@@ -27,7 +27,7 @@ Akasa maintains a small fork of the [Playwright Python](https://github.com/micro
   * `PYTHONPATH=$(pwd) ./scripts/update_api.sh`
   * Build: `python setup.py bdist_wheel --all`
   * Copy these files to dev server: `scp dist/playwright-*.whl cmason-capsule-u22:`
-  * Release: (substitute <version> with the version used above)
+  * Release: (substitute <version> with the version used in setup.py)
     ```
     aws codeartifact login --tool twine --repository akasa --domain akasa --domain-owner 025412125743
     twine upload --verbose --repository codeartifact playwright-<version>-py3-none-*
